@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="TrangChu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            float: left;
+            width: 1001px;
+            height: 50px;
+            color: #CC0000;
+            font-size: large;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header">
+            <div class="logo" style="text-align:center; font-weight:bolder; color:#0311fa" >
+                HNC<br />
+                <asp:Image ID="Image1" runat="server" Height="80px" Width="100px" ImageUrl="~/hinhanh/trangchu4.PNG"  />
+                &nbsp;<p class="txlogo">&nbsp;</p>
+            </div>
+            <div class="menu" style="text-align:center">
+                <ul>
+                    <li><a href="TrangChu.aspx">Trang Chủ</a></li>
+                    <li><a href="SanPham.aspx">Sản Phẩm</a></li>
+                    <li><a href="DangNhap.aspx">Tài Khoản</a></li>
+                    <li><a href="khuyenmai.aspx">Khuyến Mãi</a></li>
+                    <li><a href="ChinhSachBaoHanh.aspx">Chính Sách Bảo Hành</a></li>
+                </ul>
+            </div>
+            <div class="auto-style1"><strong style="float:left">ĐC: 140 Lê Trọng Tấn, P. Tây Thạnh, Quận Tân Phú, TP HCM
+                <br />
+                ĐT: 0961042098</strong>
+                 &nbsp;&nbsp;&nbsp;<p style="float:right"> Tìm kiếm SP:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;
+               <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/hinhanh/search.PNG" Height="16px" Width="17px" OnClick="ImageButton1_Click"/></p>
+            
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            
+            </div>
+           
+            <div class="login" style="float:right; padding-right:50px">
+                
+                <% 
+                    if((String)Session["Login"]=="2")
+                    {
+                %>
+                 <asp:LinkButton ID="LinkButton2" OnClick="LinkExit_Click" runat="server">Thoát</asp:LinkButton>
+                
+                <%--<asp:ImageButton ID="ImageButton2" ImageUrl="~/hinhanh/search.PNG" OnClick="GioHang" Height="16px" Width="17px" runat="server" />--%>
+
+                <%
+                }
+                else{
+                    
+                  %>
+                 <asp:LinkButton ID="LinkButton1" OnClick="LinkDN_Click" runat="server">Đăng nhập</asp:LinkButton>
+                <br />
+              
+                
+                <%} %>
+                
+                <p style="color:red; font-size:15px"> 
+                     <%
+                    string KTDangNhap = (string)Session["Login"]; // = 0 :chưa ai đn, 1 : đn
+                    if (KTDangNhap == "2")
+                    {
+                        //  Response.Write("sdgdf");
+                        Response.Write("Hi, " + Session["Name"]);
+                        
+                    }
+                     %> 
+
+                </p>
+
+
+            </div>
+        </div>
+        <div class="left">
+            <asp:GridView CssClass="mGrid" ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" GridLines="None" CellSpacing="1">
+                <Columns>
+                    <asp:HyperLinkField DataNavigateUrlFields="lk" DataTextField="TENLOAI" HeaderText="Danh Sách Hãng Điện Thoại" />
+                </Columns>
+                <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
+                <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
+                <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+                <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#594B9C" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#33276A" />
+            </asp:GridView>
+            <br />
+            <%
+                if ((String)Session["People"] == "Admin")
+                { 
+                 %>
+             <asp:Button ID="QLSP" runat="server" OnClick="QLSP_Click" Text="Quản Lý Sản Phẩm" ForeColor="BlueViolet" />
+            <%
+            } %>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer" style="background:#dcd6d6">
+            <div class="ft1">
+                <strong>CÔNG TY TNHH CÔNG NGHỆ HNC</strong> <br />
+                <strong>EMAIL: CSKH@HNC.COM </strong> <br />
+                <strong>HỆ THỐNG TỔNG ĐÀI</strong>: (Làm việc từ 8h30 - 20h30) <br />
+                Gọi mua hàng: <strong>0961042098 </strong> <br />
+                Gọi CSKH & Khiếu nại: <strong>0823239254 </strong> <br />
+                Gọi bảo hành & kỹ thuật: <strong>0961042098 </strong> <br />
+                Tuyển dụng: <strong>0823239254 </strong>
+            </div>
+            <div class="ft2">
+                <strong>HỆ THỐNG CỬA HÀNG:</strong> (Làm việc từ 8h30 - 20h30) <br />
+                - <strong>Địa chỉ</strong>: 140 Lê Trọng Tấn, phường Tây Thạnh,Quận Tân Phú, TP HCM<br />
+                
+                Mua SMARTPHONE hàng đầu Việt Nam bảo hành chính hãng. Mua online nhận nhiều ưu đãi hấp dẫn.
+            </div>
+            
+        </div>
+        
+    </div>
+    </form>
+</body>
+</html>

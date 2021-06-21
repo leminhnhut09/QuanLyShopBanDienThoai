@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DETAIWEB", ".", "{527B8BC4-CB46-4AD6-B0A3-35F1753386C7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/DETAIWEB"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\DETAIWEB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DETAIWEB\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DETAIWEB"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\DETAIWEB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DETAIWEB\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "21297"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{527B8BC4-CB46-4AD6-B0A3-35F1753386C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527B8BC4-CB46-4AD6-B0A3-35F1753386C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

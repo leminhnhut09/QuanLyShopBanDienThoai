@@ -1,0 +1,161 @@
+﻿body {
+}
+
+.main{
+    padding:0px;
+    
+}
+
+.header {
+    width:auto;
+    height:120px;
+    margin-bottom: 5px;
+    background-color:yellow;
+
+}
+
+.logo {
+    float:left;
+    height:100px;
+    width:150px;
+    margin-right:20px;
+}
+.txlogo {
+    text-align:center;
+    padding-top:25px;
+    padding-right:20px;
+}
+.menu {
+    /*margin-top:10px;*/
+    float:left;
+    width:1300px;
+    height:65px;
+    margin-right:20px;
+    font-size:32px;
+    font-weight:bold;
+    text-transform:fullwidth;
+}
+    .menu ul {
+        list-style:none;
+        padding:0;
+        margin:0;    
+        text-align:center;  
+        text-transform:uppercase;
+    width: auto;
+}
+    .menu ul li{
+       /*border-left:solid 0px white;*/
+        display:inline;
+        padding-top:20px;
+        
+    }
+        .menu ul li a {
+            text-decoration:none;
+            color:black;
+            padding: 0 10px;
+
+        }
+        .menu ul li :hover {
+            font-weight:bold;
+            background-color:#f56f0b;
+
+        }
+.diachi{
+    float:left;
+    width:700px;
+    height:50px;
+    
+}
+.search {
+    float:left;
+    width:293px;
+    height:82px;   
+}
+.left {
+    width:150px;
+    float:left;
+}
+.content {
+    width:1341px;
+    min-height:480px;
+    height:auto;
+    /*border: 1px solid #808080;*/
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    float:left;
+}
+
+.footer {
+    background:#cac8c8;
+    padding-top:20px;
+    padding-bottom:20px;
+    width:auto;
+    height:130px;
+    clear:both;
+    /*border: 1px solid #808080;*/
+
+}
+.ft1 {
+    float:left;
+    width: 500px;
+    height:130px;
+    padding-left:20px;
+}
+
+.ft2 {
+    float:right;
+    width: 500px;
+    height:130px;
+}
+.tbl_DK_div {
+text-align:center;
+}
+.tbl_DK {
+display: inline-block;
+}
+.tbl_DN {
+display: inline-block;
+}
+
+/*Chinh Màu cho các dòng*/
+.mGrid tr.row
+{
+ background:#e8fbfb;
+ height:30px;
+}
+/*Chỉnh Hover cho từng dòng*/
+.mGrid tr.row:hover
+{
+ background:#e12b2b;
+ width:100%;
+}
+/*Chỉnh hover cho từng ô*/
+.mGrid td:hover
+{
+ background:#c319e1;
+}
+
+#cart{
+background-color:#0FF;
+position:fixed;
+top:0;
+right:0;
+bottom:0;
+width:100px;
+text-align:center;
+}
+#cart p{
+text-align:center;
+color:#00F;
+margin:0;
+}
+#cart #cardimg{
+width:80px;
+margin-bottom:10px;
+}
+#cart img{
+width:40px;
+height:60px;
+margin:2px;
+}
